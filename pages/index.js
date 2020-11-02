@@ -7,7 +7,7 @@ import { useDebounce } from '../utils/useDebounce'
 import styles from './index.module.css'
 
 const Index = () => {
-  // Hold the height value in the state, begin with the height of 485px
+  //Hold the height value in the state, begin with the height of 485px
   const [heightValue, setHeightValue] = useState('485px')
 
   const [htmlValue, setHtmlValue] = useState('')
