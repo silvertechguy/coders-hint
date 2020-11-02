@@ -11,7 +11,7 @@ const Index = () => {
     <SplitPane
       split="horizontal"
       minSize={'50%'}
-      // We use the onDragFinished event of SplitPane to update the height value in the state. We remove 40px to compensate the editor's titles
+      // We use the onDragFinished event of SplitPane to update the height value in the state. We remove 40px to compensate the editor's titles.
       onDragFinished={(height) => {
         setHeightValue(`${height - 40}px`)
       }}

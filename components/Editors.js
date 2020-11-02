@@ -1,6 +1,7 @@
 import React from 'react'
 
 import AceEditor from 'react-ace'
+import 'ace-builds'
 import 'ace-builds/src-noconflict/mode-html'
 import 'ace-builds/src-noconflict/mode-css'
 import 'ace-builds/src-noconflict/mode-javascript'
@@ -12,9 +13,9 @@ const Editor = ({ title, mode, height }) => (
   <div className={styles.editorContainer}>
     <div className={styles.editorTitle}>{title}</div>
     <AceEditor
-      name={title}
       mode={mode}
       theme="monokai"
+      name={title}
       fontSize={18}
       width={'100%'}
       showPrintMargin={true}
