@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import SplitPane from 'react-split-pane'
 
 import { CssEditor, HtmlEditor, JavascriptEditor } from '../components/editors'
