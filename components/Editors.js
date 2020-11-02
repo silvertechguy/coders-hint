@@ -1,23 +1,39 @@
 import React from 'react'
 
+import AceEditor from 'react-ace'
+import 'ace-builds/src-noconflict/mode-html'
+import 'ace-builds/src-noconflict/mode-css'
+import 'ace-builds/src-noconflict/mode-javascript'
+import 'ace-builds/src-noconflict/theme-monokai'
+
 import styles from './editors.module.css'
 
-const Editor = ({ title }) => {
-  return (
-    <div className={styles.editorContainer}>
-      <div className={styles.editorTitle}>{title}</div>
-    </div>
-  )
-}
+const Editor = ({ title, mode, height }) => (
+  <div className={styles.editorContainer}>
+    <div className={styles.editorTitle}>{title}</div>
+    <AceEditor
+      name={title}
+      mode={mode}
+      theme="monokai"
+      fontSize={18}
+      width={'100%'}
+      showPrintMargin={true}
+      showGutter={true}
+      tabSize={2}
+      setOptions={{ useWorker: false }}
+      height={height}
+    />
+  </div>
+)
 
-export const HtmlEditor = () => {
-  return <Editor title={'HTML'} />
-}
+export const HtmlEditor = (props) => (
+  <Editor title={'HTML'} mode="html" {...props} />
+)
 
-export const CssEditor = () => {
-  return <Editor title={'CSS'} />
-}
+export const CssEditor = (props) => (
+  <Editor title={'CSS'} mode="css" {...props} />
+)
 
-export const JavascriptEditor = () => {
-  return <Editor title={'Javascript'} />
-}
+export const JavascriptEditor = (props) => (
+  <Editor title={'JS'} mode="javascript" {...props} />
+)
