@@ -9,6 +9,8 @@
   },
   "dependencies": {
     "ace-builds": "^1.4.12",
+    "mongo-mock": "^4.0.0",
+    "mongodb": "^3.6.2",
     "next": "10.0.0",
     "react": "17.0.1",
     "react-ace": "^9.2.0",

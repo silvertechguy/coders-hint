@@ -30,7 +30,6 @@ body {
 .Resizer.disabled {
   cursor: not-allowed;
 }
-
 .Resizer.disabled:hover {
   border-color: transparent;
 }
