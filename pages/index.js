@@ -3,7 +3,7 @@ import { useRouter } from "next/router";
 import SplitPane from "react-split-pane";
 
 import { CssEditor, HtmlEditor, JavascriptEditor } from "../components/editors";
-import { useDebounce } from "./useDebounce";
+import { useDebounce } from "../utils/useDebounce";
 
 import styles from "./index.module.css";
 
